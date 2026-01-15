@@ -1,12 +1,6 @@
 import { useState } from 'react';
 
 // Icons as simple SVG components
-const WavesIcon = () => (
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-  </svg>
-);
-
 const StarIcon = ({ filled = false }: { filled?: boolean }) => (
   <svg className="w-5 h-5" fill={filled ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
@@ -101,11 +95,8 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-ocean-600 to-ocean-800 rounded-full flex items-center justify-center text-white">
-                <WavesIcon />
-              </div>
-              <span className="font-serif text-xl font-semibold text-ocean-800">Les Secrets de la Marée</span>
+            <div className="flex items-center gap-3">
+              <img src="/images/logo.jpg" alt="Les Secrets de la Marée" className="h-10 w-auto" />
             </div>
             <a
               href="#reservation"
@@ -123,10 +114,10 @@ function App() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2074&auto=format&fit=crop')`,
+            backgroundImage: `url('/images/hero.png')`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/70 via-ocean-800/50 to-ocean-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/60 via-ocean-800/40 to-ocean-900/70" />
         </div>
 
         {/* Content */}
@@ -213,8 +204,8 @@ function App() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1606850780554-b55ea4dd0b70?q=80&w=2070&auto=format&fit=crop"
-                alt="Dégustation d'huîtres"
+                src="/images/degustation.jpg"
+                alt="Dégustation d'huîtres les pieds dans l'eau"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3">
@@ -251,6 +242,25 @@ function App() {
                 <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 bg-shell-50">
+        <div className="container-custom px-4">
+          <div className="text-center mb-12">
+            <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Galerie</span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mt-2">
+              L'expérience en images
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="/images/hero.png" alt="Dégustation au coucher de soleil" className="rounded-xl shadow-lg hover:scale-105 transition-transform col-span-2 row-span-2 object-cover h-full" />
+            <img src="/images/ostreiculteurs.jpg" alt="Les ostréiculteurs" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
+            <img src="/images/groupe.jpg" alt="Groupe de dégustation" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
+            <img src="/images/degustation.jpg" alt="Partage d'huîtres" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
+            <img src="/images/golfe.jpg" alt="Vue sur le Golfe du Morbihan" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
           </div>
         </div>
       </section>
@@ -420,10 +430,7 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-ocean-600 to-ocean-800 rounded-full flex items-center justify-center">
-                  <WavesIcon />
-                </div>
-                <span className="font-serif text-xl font-semibold">Les Secrets de la Marée</span>
+                <img src="/images/logo.jpg" alt="Les Secrets de la Marée" className="h-12 w-auto rounded-lg" />
               </div>
               <p className="text-white/60 text-sm leading-relaxed">
                 Expérience huîtrière premium dans le Golfe du Morbihan.
