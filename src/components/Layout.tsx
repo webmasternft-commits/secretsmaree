@@ -176,14 +176,14 @@ export default function Layout({ children }: LayoutProps) {
                 </li>
                 <li className="flex items-center gap-2">
                   <span>📧</span>
-                  <a href="mailto:contact@secretsmaree.com" className="hover:text-white transition-colors">
-                    contact@secretsmaree.com
+                  <a href="mailto:max@secretsmaree.com" className="hover:text-white transition-colors">
+                    max@secretsmaree.com
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <span>📱</span>
-                  <a href="tel:+33612345678" className="hover:text-white transition-colors">
-                    06 12 34 56 78
+                  <a href="tel:+33651302497" className="hover:text-white transition-colors">
+                    06 51 30 24 97
                   </a>
                 </li>
               </ul>
@@ -207,8 +207,8 @@ export default function Layout({ children }: LayoutProps) {
               <Link to="/mentions-legales" className="hover:text-white transition-colors">
                 Mentions légales
               </Link>
-              <Link to="/cgv" className="hover:text-white transition-colors">
-                CGV
+              <Link to="/politique-confidentialite" className="hover:text-white transition-colors">
+                Confidentialité
               </Link>
             </div>
           </div>

@@ -12,7 +12,8 @@ export default function ContactPage() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    rgpdConsent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -29,14 +30,14 @@ export default function ContactPage() {
     {
       icon: "📧",
       title: "Email",
-      value: "contact@secretsmaree.com",
-      link: "mailto:contact@secretsmaree.com"
+      value: "max@secretsmaree.com",
+      link: "mailto:max@secretsmaree.com"
     },
     {
       icon: "📱",
       title: "Téléphone",
-      value: "06 12 34 56 78",
-      link: "tel:+33612345678"
+      value: "06 51 30 24 97",
+      link: "tel:+33651302497"
     },
     {
       icon: "📍",
@@ -120,7 +121,7 @@ export default function ContactPage() {
                     <button
                       onClick={() => {
                         setSubmitted(false);
-                        setFormData({ name: '', email: '', subject: '', message: '' });
+                        setFormData({ name: '', email: '', subject: '', message: '', rgpdConsent: false });
                       }}
                       className="text-ocean-600 hover:text-ocean-700 font-semibold"
                     >
@@ -180,6 +181,24 @@ export default function ContactPage() {
                         rows={5}
                         placeholder="Votre message..."
                       />
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <input
+                        type="checkbox"
+                        id="rgpdConsent"
+                        required
+                        checked={formData.rgpdConsent}
+                        onChange={(e) => setFormData({...formData, rgpdConsent: e.target.checked})}
+                        className="mt-1 w-4 h-4 text-ocean-600 border-gray-300 rounded focus:ring-ocean-500"
+                      />
+                      <label htmlFor="rgpdConsent" className="text-sm text-gray-600">
+                        J'accepte que mes données soient traitées conformément à la{' '}
+                        <Link to="/politique-confidentialite" className="text-ocean-600 hover:underline" target="_blank">
+                          politique de confidentialité
+                        </Link>
+                        . *
+                      </label>
                     </div>
 
                     <button
