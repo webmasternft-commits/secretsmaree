@@ -1,5 +1,5 @@
 // Configuration - Remplacer par l'URL de votre Google Apps Script déployé
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/VOTRE_SCRIPT_ID/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwi_sPdY_yhGqT5GRt59TB7qbQVcOZ7XzFH2TJPNZifS1lv_K221Uc1lq1-DQw_lJRI/exec';
 
 export interface ContactFormData {
   type: 'contact';
