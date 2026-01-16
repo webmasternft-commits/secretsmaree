@@ -14,6 +14,8 @@ import PolitiqueConfidentialitePage from './pages/PolitiqueConfidentialitePage';
 import HomePageEN from './pages/en/HomePageEN';
 import ExperiencePageEN from './pages/en/ExperiencePageEN';
 import PricesPageEN from './pages/en/PricesPageEN';
+import OurStoryPageEN from './pages/en/OurStoryPageEN';
+import GalleryPageEN from './pages/en/GalleryPageEN';
 import ContactPageEN from './pages/en/ContactPageEN';
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
         <Route path="/en" element={<LayoutEN><HomePageEN /></LayoutEN>} />
         <Route path="/en/experience" element={<LayoutEN><ExperiencePageEN /></LayoutEN>} />
         <Route path="/en/prices" element={<LayoutEN><PricesPageEN /></LayoutEN>} />
+        <Route path="/en/our-story" element={<LayoutEN><OurStoryPageEN /></LayoutEN>} />
+        <Route path="/en/gallery" element={<LayoutEN><GalleryPageEN /></LayoutEN>} />
         <Route path="/en/contact" element={<LayoutEN><ContactPageEN /></LayoutEN>} />
       </Routes>
       <CookieBanner />
