@@ -19,91 +19,91 @@ export default function ExperiencePage() {
   const timeline = [
     {
       time: "T-30min",
-      title: "Accueil & Équipement",
-      description: "Rendez-vous au point de départ. On vous équipe de bottes si besoin et on vous présente le déroulement de l'expérience.",
+      title: "Accueil au point de rendez-vous",
+      description: "Rendez-vous sur le littoral du Golfe du Morbihan. Équipement fourni (bottes) et présentation du programme.",
       icon: "👋"
     },
     {
       time: "T",
-      title: "Départ vers l'estran",
-      description: "Direction les parcs à huîtres ! On traverse l'estran ensemble en découvrant cet écosystème unique.",
+      title: "Traversée de l'estran",
+      description: "Marche vers les parcs ostréicoles à marée basse. Découverte de la faune et flore de cet écosystème protégé.",
       icon: "🚶"
     },
     {
       time: "T+30min",
-      title: "Découverte ostréicole",
-      description: "Maxime vous explique son métier, les techniques de culture, les différentes variétés d'huîtres du Golfe.",
+      title: "Visite des parcs à huîtres",
+      description: "Présentation des techniques ostréicoles bretonnes : poches, tables, affinage. Découverte des huîtres creuses et plates du Golfe.",
       icon: "🦪"
     },
     {
       time: "T+1h",
-      title: "Récolte & Ouverture",
-      description: "Participez à la récolte des huîtres et apprenez à les ouvrir comme un pro. C'est aussi ça l'expérience !",
+      title: "Récolte et ouverture",
+      description: "Participez à la récolte et apprenez les gestes traditionnels d'ouverture des huîtres du Morbihan.",
       icon: "🔪"
     },
     {
       time: "T+1h30",
-      title: "Dégustation",
-      description: "Le moment tant attendu : huîtres fraîches, champagne glacé, les pieds dans l'eau face au Golfe.",
+      title: "Dégustation sur l'estran",
+      description: "Dégustation d'huîtres fraîches et de champagne, les pieds dans l'eau, face aux îles du Golfe du Morbihan.",
       icon: "🥂"
     },
     {
       time: "T+2h30",
-      title: "Fin & Photos",
-      description: "On immortalise ce moment unique avant de se quitter. Vous repartez avec des souvenirs plein la tête.",
+      title: "Fin de l'expérience",
+      description: "Retour vers le rivage et photos souvenirs dans ce cadre exceptionnel classé.",
       icon: "📸"
     }
   ];
 
   const inclusions = [
-    { item: "12 huîtres par personne (creuses et plates)", included: true },
+    { item: "12 huîtres par personne (creuses et plates du Golfe)", included: true },
     { item: "1 bouteille de champagne pour 2 personnes", included: true },
-    { item: "Découverte du métier d'ostréiculteur", included: true },
-    { item: "Marche guidée sur l'estran", included: true },
-    { item: "Cours d'ouverture d'huîtres", included: true },
-    { item: "Photos souvenirs de l'expérience", included: true },
+    { item: "Visite guidée des parcs ostréicoles", included: true },
+    { item: "Découverte de l'estran et de sa biodiversité", included: true },
+    { item: "Initiation à l'ouverture des huîtres", included: true },
+    { item: "Photos souvenirs", included: true },
     { item: "Prêt de bottes (sur demande)", included: true },
     { item: "Dégustation les pieds dans l'eau", included: true }
   ];
 
   const faqs = [
     {
-      question: "Combien de personnes peuvent participer ?",
-      answer: "Chaque session accueille un groupe intimiste de 6 personnes maximum, garantissant une expérience personnalisée et authentique. Idéal pour un moment en couple, entre amis ou en famille."
+      question: "Où se déroule l'expérience de dégustation d'huîtres ?",
+      answer: "L'expérience se déroule directement sur les parcs ostréicoles du Golfe du Morbihan, en Bretagne Sud. Vous dégusterez les huîtres les pieds dans l'eau, face aux îles du Golfe, dans un cadre naturel classé."
     },
     {
-      question: "Que comprend l'expérience ?",
-      answer: "L'expérience comprend une dégustation d'huîtres fraîchement récoltées (environ 12 par personne), une bouteille de champagne pour 2, une découverte des techniques ostréicoles et une immersion unique les pieds dans l'eau."
+      question: "Combien de personnes peuvent participer à une session ?",
+      answer: "Chaque session accueille un groupe de 6 personnes maximum. Ce format intimiste garantit une expérience de qualité, idéale en couple, entre amis ou en famille."
     },
     {
-      question: "Quelle est la durée de l'expérience ?",
-      answer: "L'expérience dure environ 2h30, incluant l'accueil, la découverte du parc à huîtres, la dégustation et un moment de convivialité face au Golfe du Morbihan."
+      question: "Quelle est la durée de la dégustation d'huîtres ?",
+      answer: "L'expérience complète dure environ 2h30 : accueil, traversée de l'estran, visite des parcs à huîtres, dégustation et retour. Un moment hors du temps au cœur du Golfe du Morbihan."
     },
     {
-      question: "Comment sont choisies les dates ?",
-      answer: "Les sessions sont programmées en fonction des grandes marées (coefficient > 90) pour accéder aux parcs à huîtres. Vous recevrez les dates disponibles après votre inscription."
+      question: "Quand ont lieu les sessions de dégustation ?",
+      answer: "Les sessions sont programmées lors des grandes marées (coefficient supérieur à 90) pour accéder aux parcs ostréicoles. Ces conditions permettent de vivre une expérience authentique sur l'estran du Golfe du Morbihan."
     },
     {
-      question: "Faut-il un équipement particulier ?",
-      answer: "Nous vous recommandons des bottes ou chaussures qui ne craignent pas l'eau, des vêtements adaptés à la météo. Le matériel de dégustation est fourni. Nous pouvons prêter des bottes sur demande."
+      question: "Quel équipement prévoir pour la dégustation sur l'estran ?",
+      answer: "Prévoyez des vêtements adaptés à la météo bretonne. Nous fournissons des bottes sur demande. Le matériel de dégustation (couteaux, assiettes, verres) est inclus."
     },
     {
       question: "L'expérience est-elle accessible à tous ?",
-      answer: "L'expérience nécessite de marcher sur l'estran (terrain parfois irrégulier). Elle n'est pas adaptée aux personnes à mobilité réduite. L'âge minimum recommandé est 12 ans."
+      answer: "L'expérience nécessite de marcher sur l'estran (terrain parfois irrégulier). Elle n'est pas adaptée aux personnes à mobilité réduite. Âge minimum recommandé : 12 ans."
     },
     {
-      question: "Que se passe-t-il en cas de mauvais temps ?",
-      answer: "L'expérience a lieu par tous les temps, c'est ça aussi l'authenticité ! En cas de conditions météo dangereuses (tempête, orage), nous reportons la session et vous proposons une nouvelle date."
+      question: "Que se passe-t-il en cas de mauvais temps en Bretagne ?",
+      answer: "L'expérience a lieu par tous les temps, c'est l'authenticité bretonne ! En cas de conditions dangereuses (tempête, orage), nous reportons et proposons une nouvelle date."
     },
     {
-      question: "Peut-on offrir l'expérience en cadeau ?",
-      answer: "Absolument ! C'est même l'un des cadeaux les plus appréciés. Vous pouvez commander un bon cadeau valable 1 an, personnalisable avec un message."
+      question: "Peut-on offrir cette expérience ostréicole en cadeau ?",
+      answer: "Oui, le bon cadeau est valable 1 an et personnalisable. C'est une idée originale pour offrir une expérience unique dans le Golfe du Morbihan."
     }
   ];
 
   return (
     <>
-      {/* Hero */}
+      {/* Hero Section - Optimisé SEO */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -113,43 +113,76 @@ export default function ExperiencePage() {
         </div>
         <div className="relative z-10 container-custom px-4">
           <span className="inline-block bg-ocean-500/30 text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
-            Une immersion unique
+            Golfe du Morbihan, Bretagne
           </span>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">
-            L'Expérience<br />
-            <span className="text-sand-300">Les Secrets de la Marée</span>
+            Dégustation d'huîtres<br />
+            <span className="text-sand-300">les pieds dans l'eau</span>
           </h1>
           <p className="text-xl text-white/80 max-w-2xl leading-relaxed">
-            2h30 d'immersion au cœur des parcs à huîtres du Golfe du Morbihan.
-            Une expérience sensorielle unique, les pieds dans l'eau à marée basse.
+            Vivez une expérience ostréicole unique au cœur du Golfe du Morbihan.
+            2h30 d'immersion sur les parcs à huîtres, à marée basse, dans l'un des plus beaux sites naturels de Bretagne.
           </p>
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Le Golfe du Morbihan - Section SEO/GEO */}
       <section className="section-padding bg-white">
+        <div className="container-custom px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Un site d'exception</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mt-2 mb-6">
+                Le Golfe du Morbihan, berceau de l'ostréiculture bretonne
+              </h2>
+              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                Le Golfe du Morbihan, dont le nom signifie "petite mer" en breton, est une mer intérieure de 115 km²
+                parsemée d'une quarantaine d'îles. Classé parmi les plus belles baies du monde, ce site naturel
+                protégé abrite une biodiversité exceptionnelle.
+              </p>
+              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                L'ostréiculture y est pratiquée depuis le XIXe siècle. Les eaux riches en nutriments et le
+                mélange unique d'eau douce et salée confèrent aux huîtres du Golfe leur saveur caractéristique,
+                à la fois iodée et légèrement noisettée.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Aujourd'hui, le Golfe du Morbihan compte plus de 300 ostréiculteurs qui perpétuent ce savoir-faire
+                traditionnel, produisant chaque année des millions d'huîtres creuses et plates reconnues pour leur qualité.
+              </p>
+            </div>
+            <div className="relative">
+              <img
+                src="/images/ostreiculteurs.jpg"
+                alt="Parcs ostréicoles du Golfe du Morbihan en Bretagne"
+                className="rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline - Déroulement */}
+      <section className="section-padding bg-shell-50">
         <div className="container-custom px-4">
           <div className="text-center mb-16">
             <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Le déroulement</span>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-ocean-900 mt-2">
-              2h30 d'exception
+              2h30 sur les parcs à huîtres
             </h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Une immersion complète dans l'univers ostréicole du Golfe du Morbihan, de la récolte à la dégustation.
+            </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             {timeline.map((step, index) => (
               <div key={index} className="relative flex gap-6 pb-12 last:pb-0">
-                {/* Line */}
                 {index < timeline.length - 1 && (
                   <div className="absolute left-8 top-16 w-0.5 h-full bg-ocean-200" />
                 )}
-
-                {/* Icon */}
                 <div className="w-16 h-16 flex-shrink-0 bg-gradient-to-br from-ocean-500 to-ocean-700 rounded-2xl flex items-center justify-center text-3xl shadow-lg">
                   {step.icon}
                 </div>
-
-                {/* Content */}
                 <div className="flex-1 pt-2">
                   <span className="text-ocean-600 font-mono text-sm font-medium">{step.time}</span>
                   <h3 className="text-xl font-semibold text-ocean-900 mt-1 mb-2">{step.title}</h3>
@@ -161,6 +194,41 @@ export default function ExperiencePage() {
         </div>
       </section>
 
+      {/* Les huîtres du Golfe */}
+      <section className="section-padding bg-white">
+        <div className="container-custom px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <img
+                src="/images/groupe.jpg"
+                alt="Dégustation d'huîtres sur l'estran du Golfe du Morbihan"
+                className="rounded-2xl shadow-2xl"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Produit d'exception</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mt-2 mb-6">
+                Les huîtres du Golfe du Morbihan
+              </h2>
+              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                Le Golfe du Morbihan produit deux variétés d'huîtres d'exception : l'huître creuse
+                (<em>Crassostrea gigas</em>) et l'huître plate (<em>Ostrea edulis</em>), espèce native
+                des côtes bretonnes.
+              </p>
+              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                Les huîtres creuses du Golfe se distinguent par leur chair ferme et leur goût équilibré
+                entre sel et douceur. Les huîtres plates, plus rares, offrent une saveur plus prononcée
+                avec des notes de noisette caractéristiques.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Élevées pendant 3 à 4 ans dans les eaux pures du Golfe, nos huîtres sont récoltées
+                le jour même de votre dégustation pour une fraîcheur optimale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What's Included */}
       <section className="section-padding bg-shell-50">
         <div className="container-custom px-4">
@@ -168,7 +236,7 @@ export default function ExperiencePage() {
             <div>
               <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Tout compris</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mt-2 mb-6">
-                Ce qui est inclus
+                Ce qui est inclus dans l'expérience
               </h2>
               <div className="grid gap-4">
                 {inclusions.map((item, index) => (
@@ -183,8 +251,8 @@ export default function ExperiencePage() {
             </div>
             <div className="relative">
               <img
-                src="/images/groupe.jpg"
-                alt="Groupe en dégustation"
+                src="/images/degustation.jpg"
+                alt="Huîtres et champagne sur les parcs ostréicoles de Bretagne"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-ocean-600 text-white rounded-xl shadow-lg p-6">
@@ -196,62 +264,25 @@ export default function ExperiencePage() {
         </div>
       </section>
 
-      {/* The Host */}
+      {/* FAQ - Optimisé SEO */}
       <section className="section-padding bg-white">
-        <div className="container-custom px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <img
-                src="/images/ostreiculteurs.jpg"
-                alt="Maxime, ostréiculteur passionné"
-                className="rounded-2xl shadow-2xl"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Votre hôte</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mt-2 mb-6">
-                Maxime, ostréiculteur passionné
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Fils et petit-fils d'ostréiculteurs, Maxime a grandi les pieds dans l'eau du Golfe du Morbihan.
-                Passionné par son métier, il a créé Les Secrets de la Marée pour partager son univers
-                avec ceux qui veulent découvrir l'huître autrement.
-              </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                "Mon plus grand plaisir, c'est de voir les yeux émerveillés de mes invités
-                quand ils dégustent leur première huître les pieds dans l'eau, face au Golfe.
-                C'est un moment de connexion unique avec la nature et notre terroir."
-              </p>
-              <Link
-                to="/notre-histoire"
-                className="inline-flex items-center gap-2 text-ocean-600 font-semibold hover:text-ocean-700 transition-colors"
-              >
-                Découvrir notre histoire
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="section-padding bg-shell-50">
         <div className="container-custom max-w-3xl px-4">
           <div className="text-center mb-16">
             <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">FAQ</span>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-ocean-900 mt-2">
               Questions fréquentes
             </h2>
+            <p className="text-gray-600 mt-4">
+              Tout savoir sur notre expérience de dégustation d'huîtres dans le Golfe du Morbihan.
+            </p>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <div key={index} className="bg-shell-50 rounded-xl shadow-sm overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-shell-100 transition-colors"
                 >
                   <span className="font-semibold text-ocean-900">{faq.question}</span>
                   <span className={`transform transition-transform ${openFaq === index ? 'rotate-180' : ''}`}>
@@ -273,10 +304,10 @@ export default function ExperiencePage() {
       <section className="section-padding bg-gradient-to-br from-ocean-700 via-ocean-800 to-ocean-900 text-white">
         <div className="container-custom text-center px-4">
           <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
-            Prêt à vivre l'expérience ?
+            Réservez votre dégustation d'huîtres
           </h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Réservez dès maintenant votre place pour une session inoubliable.
+            Vivez une expérience unique sur les parcs ostréicoles du Golfe du Morbihan.
           </p>
           <Link to="/tarifs" className="btn-primary text-lg">
             Voir les tarifs et réserver

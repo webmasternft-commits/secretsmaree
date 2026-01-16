@@ -40,7 +40,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <img src="/images/logo.jpg" alt="Les Secrets de la Marée" className="h-12 w-auto" />
+              <img src="/images/logo.jpg" alt="Les Secrets de la Marée - Dégustation huîtres Golfe du Morbihan" className="h-16 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -136,7 +136,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid md:grid-cols-4 gap-12">
             {/* Brand */}
             <div className="md:col-span-2">
-              <img src="/images/logo.jpg" alt="Les Secrets de la Marée" className="h-16 w-auto mb-4 rounded-lg" />
+              <img src="/images/logo.jpg" alt="Les Secrets de la Marée - Expérience ostréicole Bretagne" className="h-24 w-auto mb-4 rounded-lg" />
               <p className="text-white/70 leading-relaxed mb-6 max-w-md">
                 Une expérience huîtrière authentique au cœur du Golfe du Morbihan.
                 Dégustez des huîtres fraîches et du champagne les pieds dans l'eau,
