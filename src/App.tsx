@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import LayoutEN from './components/LayoutEN';
 import CookieBanner from './components/CookieBanner';
 import HomePage from './pages/HomePage';
 import ExperiencePage from './pages/ExperiencePage';
@@ -9,22 +10,32 @@ import GaleriePage from './pages/GaleriePage';
 import ContactPage from './pages/ContactPage';
 import MentionsLegalesPage from './pages/MentionsLegalesPage';
 import PolitiqueConfidentialitePage from './pages/PolitiqueConfidentialitePage';
+// English pages
+import HomePageEN from './pages/en/HomePageEN';
+import ExperiencePageEN from './pages/en/ExperiencePageEN';
+import PricesPageEN from './pages/en/PricesPageEN';
+import ContactPageEN from './pages/en/ContactPageEN';
 
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/experience" element={<ExperiencePage />} />
-          <Route path="/tarifs" element={<TarifsPage />} />
-          <Route path="/notre-histoire" element={<NotreHistoirePage />} />
-          <Route path="/galerie" element={<GaleriePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
-          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        {/* French routes */}
+        <Route path="/" element={<Layout><HomePage /></Layout>} />
+        <Route path="/experience" element={<Layout><ExperiencePage /></Layout>} />
+        <Route path="/tarifs" element={<Layout><TarifsPage /></Layout>} />
+        <Route path="/notre-histoire" element={<Layout><NotreHistoirePage /></Layout>} />
+        <Route path="/galerie" element={<Layout><GaleriePage /></Layout>} />
+        <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
+        <Route path="/mentions-legales" element={<Layout><MentionsLegalesPage /></Layout>} />
+        <Route path="/politique-confidentialite" element={<Layout><PolitiqueConfidentialitePage /></Layout>} />
+
+        {/* English routes */}
+        <Route path="/en" element={<LayoutEN><HomePageEN /></LayoutEN>} />
+        <Route path="/en/experience" element={<LayoutEN><ExperiencePageEN /></LayoutEN>} />
+        <Route path="/en/prices" element={<LayoutEN><PricesPageEN /></LayoutEN>} />
+        <Route path="/en/contact" element={<LayoutEN><ContactPageEN /></LayoutEN>} />
+      </Routes>
       <CookieBanner />
     </Router>
   );

@@ -13,50 +13,50 @@ const ChevronDownIcon = () => (
   </svg>
 );
 
-export default function HomePage() {
+export default function HomePageEN() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: "Combien de personnes peuvent participer ?",
-      answer: "Chaque session accueille un groupe intimiste de 6 personnes maximum, garantissant une expérience personnalisée et authentique. Idéal pour un moment en couple, entre amis ou en famille."
+      question: "How many people can participate?",
+      answer: "Each session welcomes an intimate group of 6 people maximum, ensuring a personalized and authentic experience. Perfect for couples, friends, or families."
     },
     {
-      question: "Que comprend l'expérience ?",
-      answer: "L'expérience comprend une dégustation d'huîtres fraîchement récoltées (environ 12 par personne), une bouteille de champagne pour 2, une découverte des techniques ostréicoles et une immersion unique les pieds dans l'eau."
+      question: "What is included in the experience?",
+      answer: "The experience includes freshly harvested oysters tasting (about 12 per person), a bottle of champagne for 2, a discovery of oyster farming techniques, and a unique immersion with your feet in the water."
     },
     {
-      question: "Quelle est la durée de l'expérience ?",
-      answer: "L'expérience dure environ 2h30, incluant l'accueil, la découverte du parc à huîtres, la dégustation et un moment de convivialité face au Golfe du Morbihan."
+      question: "How long does the experience last?",
+      answer: "The experience lasts approximately 2.5 hours, including welcome, oyster farm discovery, tasting, and a convivial moment facing the Gulf of Morbihan."
     }
   ];
 
   const testimonials = [
     {
-      name: "Marie & Thomas",
-      location: "Paris",
-      text: "Une expérience magique ! Déguster des huîtres les pieds dans l'eau avec vue sur le Golfe, c'est un moment suspendu dans le temps. Maxime est passionnant.",
+      name: "Sarah & James",
+      location: "London, UK",
+      text: "A magical experience! Tasting oysters with our feet in the water overlooking the Gulf was unforgettable. Highly recommend for any seafood lover visiting Brittany.",
       rating: 5
     },
     {
-      name: "Sophie L.",
-      location: "Nantes",
-      text: "Nous avons offert cette expérience à mes parents pour leurs 40 ans de mariage. Un souvenir inoubliable, des photos magnifiques et des huîtres exceptionnelles !",
+      name: "Emma L.",
+      location: "Dublin, Ireland",
+      text: "We gifted this experience to my parents. An incredible memory, beautiful photos, and exceptional oysters! A must-do when in Brittany.",
       rating: 5
     },
     {
-      name: "Jean-Pierre",
-      location: "Lyon",
-      text: "Amateur d'huîtres depuis toujours, j'ai découvert une nouvelle façon de les apprécier. L'authenticité de cette expérience est incomparable.",
+      name: "Michael",
+      location: "New York, USA",
+      text: "As an oyster lover, I've tried many tastings worldwide. This one in the Gulf of Morbihan was truly unique and authentic.",
       rating: 5
     }
   ];
 
   const steps = [
-    { number: "01", title: "Réservation", description: "Inscrivez-vous et recevez les prochaines dates disponibles" },
-    { number: "02", title: "Rendez-vous", description: "Rejoignez-nous au point de départ pour l'immersion" },
-    { number: "03", title: "Découverte", description: "Marchez sur l'estran et découvrez les parcs à huîtres" },
-    { number: "04", title: "Dégustation", description: "Savourez huîtres et champagne les pieds dans l'eau" }
+    { number: "01", title: "Booking", description: "Sign up and receive the next available dates" },
+    { number: "02", title: "Meeting Point", description: "Join us at the starting point for the immersion" },
+    { number: "03", title: "Discovery", description: "Walk on the foreshore and discover the oyster farms" },
+    { number: "04", title: "Tasting", description: "Savor oysters and champagne with your feet in the water" }
   ];
 
   return (
@@ -72,22 +72,22 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-24">
           <span className="inline-block bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
-            Golfe du Morbihan - Bretagne
+            Gulf of Morbihan - Brittany, France
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
-            Dégustez des Huîtres<br />
-            <span className="text-sand-300">les Pieds dans l'Eau</span>
+            Taste Fresh Oysters<br />
+            <span className="text-sand-300">With Your Feet in the Water</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Une expérience immersive et intimiste au cœur des parcs ostréicoles.
-            Huîtres fraîches, champagne et coucher de soleil sur le Golfe.
+            An immersive and intimate experience in the heart of Brittany's oyster farms.
+            Fresh oysters, champagne, and sunset over the Gulf of Morbihan.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tarifs" className="btn-primary text-lg">
-              Réserver mon expérience
+            <Link to="/en/prices" className="btn-primary text-lg">
+              Book My Experience
             </Link>
-            <Link to="/experience" className="btn-secondary text-lg">
-              Découvrir
+            <Link to="/en/experience" className="btn-secondary text-lg">
+              Learn More
             </Link>
           </div>
 
@@ -96,15 +96,15 @@ export default function HomePage() {
               <div className="flex text-sand-400">
                 {[...Array(5)].map((_, i) => <StarIcon key={i} filled />)}
               </div>
-              <span>5/5 (48 avis)</span>
+              <span>5/5 (48 reviews)</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-2xl">👥</span>
-              <span>6 pers. max</span>
+              <span>6 people max</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-2xl">⏱️</span>
-              <span>2h30 d'expérience</span>
+              <span>2.5 hour experience</span>
             </div>
           </div>
         </div>
@@ -119,25 +119,25 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">L'expérience</span>
+              <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">The Experience</span>
               <h2 className="text-3xl md:text-5xl font-serif font-bold text-ocean-900 mt-2 mb-6">
-                Une dégustation pas comme les autres
+                A Tasting Like No Other
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Imaginez-vous les pieds dans l'eau, sur l'estran du Golfe du Morbihan à marée basse.
-                Face à vous, les parcs à huîtres s'étendent à perte de vue. Dans vos mains,
-                une huître fraîchement cueillie et un verre de champagne.
+                Imagine yourself standing in the water on the Gulf of Morbihan foreshore at low tide.
+                Before you, oyster farms stretch as far as the eye can see. In your hands,
+                a freshly picked oyster and a glass of champagne.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                <strong>Les Secrets de la Marée</strong>, c'est bien plus qu'une dégustation.
-                C'est une immersion authentique dans le quotidien d'un ostréiculteur,
-                une parenthèse hors du temps au rythme des marées.
+                <strong>Les Secrets de la Marée</strong> is much more than a tasting.
+                It's an authentic immersion into the daily life of an oyster farmer,
+                a timeless escape following the rhythm of the tides.
               </p>
               <Link
-                to="/experience"
+                to="/en/experience"
                 className="inline-flex items-center gap-2 text-ocean-600 font-semibold hover:text-ocean-700 transition-colors"
               >
-                Découvrir l'expérience complète
+                Discover the full experience
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -146,7 +146,7 @@ export default function HomePage() {
             <div className="relative">
               <img
                 src="/images/degustation.jpg"
-                alt="Dégustation d'huîtres les pieds dans l'eau"
+                alt="Oyster tasting with feet in the water in Brittany"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3">
@@ -154,8 +154,8 @@ export default function HomePage() {
                   🦪
                 </div>
                 <div>
-                  <p className="font-semibold text-ocean-900">+500 personnes</p>
-                  <p className="text-sm text-gray-500">ont vécu l'expérience</p>
+                  <p className="font-semibold text-ocean-900">500+ guests</p>
+                  <p className="text-sm text-gray-500">have lived the experience</p>
                 </div>
               </div>
             </div>
@@ -167,9 +167,9 @@ export default function HomePage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Le déroulement</span>
+            <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">The Process</span>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-ocean-900 mt-2">
-              Comment ça se passe ?
+              How Does It Work?
             </h2>
           </div>
 
@@ -187,46 +187,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Gallery Preview */}
-      <section className="py-16 bg-shell-50">
-        <div className="container-custom px-4">
-          <div className="text-center mb-12">
-            <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Galerie</span>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mt-2">
-              L'expérience en images
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="/images/hero.png" alt="Dégustation au coucher de soleil" className="rounded-xl shadow-lg hover:scale-105 transition-transform col-span-2 row-span-2 object-cover h-full" />
-            <img src="/images/ostreiculteurs.jpg" alt="Les ostréiculteurs" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
-            <img src="/images/groupe.jpg" alt="Groupe de dégustation" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
-            <img src="/images/degustation.jpg" alt="Partage d'huîtres" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
-            <img src="/images/golfe.jpg" alt="Vue sur le Golfe du Morbihan" className="rounded-xl shadow-lg hover:scale-105 transition-transform object-cover h-48" />
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              to="/galerie"
-              className="inline-flex items-center gap-2 text-ocean-600 font-semibold hover:text-ocean-700 transition-colors"
-            >
-              Voir toute la galerie
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Instagram Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-shell-50">
         <div className="container-custom px-4">
           <div className="text-center mb-12">
             <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">Instagram</span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mt-2">
-              Suivez nos aventures
+              Follow Our Adventures
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Découvrez les coulisses de l'expérience, les plus beaux moments et les marées du Golfe du Morbihan.
+              Discover behind-the-scenes moments, the best experiences, and the tides of the Gulf of Morbihan.
             </p>
           </div>
 
@@ -245,9 +215,9 @@ export default function HomePage() {
                 </div>
                 <div className="text-center md:text-left flex-1">
                   <p className="text-2xl font-serif font-bold text-ocean-900 mb-2">@les_secrets_de_la_maree</p>
-                  <p className="text-gray-600 mb-4">Photos, vidéos et stories de nos dégustations sur l'estran</p>
+                  <p className="text-gray-600 mb-4">Photos, videos and stories from our tastings on the foreshore</p>
                   <span className="inline-flex items-center gap-2 text-ocean-600 font-semibold">
-                    Voir notre Instagram
+                    View our Instagram
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -263,9 +233,9 @@ export default function HomePage() {
       <section className="section-padding bg-ocean-900 text-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="text-ocean-300 font-semibold text-sm uppercase tracking-wider">Témoignages</span>
+            <span className="text-ocean-300 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
             <h2 className="text-3xl md:text-5xl font-serif font-bold mt-2">
-              Ils ont vécu l'expérience
+              What Our Guests Say
             </h2>
           </div>
 
@@ -297,7 +267,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <span className="text-ocean-600 font-semibold text-sm uppercase tracking-wider">FAQ</span>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-ocean-900 mt-2">
-              Questions fréquentes
+              Frequently Asked Questions
             </h2>
           </div>
 
@@ -324,10 +294,10 @@ export default function HomePage() {
 
           <div className="text-center mt-8">
             <Link
-              to="/experience"
+              to="/en/experience"
               className="inline-flex items-center gap-2 text-ocean-600 font-semibold hover:text-ocean-700 transition-colors"
             >
-              Voir toutes les questions
+              See all questions
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -340,20 +310,20 @@ export default function HomePage() {
       <section className="section-padding bg-gradient-to-br from-ocean-700 via-ocean-800 to-ocean-900 text-white">
         <div className="container-custom text-center">
           <span className="inline-block bg-sand-400/20 text-sand-300 text-sm font-medium px-4 py-2 rounded-full mb-6">
-            Places limitées - Prochaines sessions Avril 2026
+            Limited spots - Next sessions April 2026
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
-            Réservez votre moment d'exception
+            Book Your Exceptional Moment
           </h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Les sessions sont programmées selon les grandes marées et se remplissent rapidement.
+            Sessions are scheduled according to the tides and fill up quickly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tarifs" className="btn-primary text-lg">
-              Voir les tarifs et réserver
+            <Link to="/en/prices" className="btn-primary text-lg">
+              View Prices & Book
             </Link>
-            <Link to="/contact" className="btn-secondary text-lg border-white/30 text-white hover:bg-white/10">
-              Nous contacter
+            <Link to="/en/contact" className="btn-secondary text-lg border-white/30 text-white hover:bg-white/10">
+              Contact Us
             </Link>
           </div>
         </div>

@@ -17,17 +17,17 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function LayoutEN({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: 'Accueil', href: '/' },
-    { name: "L'Expérience", href: '/experience' },
-    { name: 'Tarifs', href: '/tarifs' },
-    { name: 'Notre Histoire', href: '/notre-histoire' },
-    { name: 'Galerie', href: '/galerie' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '/en' },
+    { name: 'Experience', href: '/en/experience' },
+    { name: 'Prices', href: '/en/prices' },
+    { name: 'Our Story', href: '/en/our-story' },
+    { name: 'Gallery', href: '/en/gallery' },
+    { name: 'Contact', href: '/en/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -39,8 +39,8 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              <img src="/images/logo.jpg" alt="Les Secrets de la Marée - Dégustation huîtres Golfe du Morbihan" className="h-16 w-auto" />
+            <Link to="/en" className="flex items-center gap-3">
+              <img src="/images/logo.jpg" alt="Les Secrets de la Marée - Oyster Tasting Gulf of Morbihan" className="h-16 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -59,17 +59,17 @@ export default function Layout({ children }: LayoutProps) {
                 </Link>
               ))}
               <Link
-                to="/en"
+                to="/"
                 className="ml-2 px-3 py-2 text-sm text-gray-500 hover:text-ocean-600 transition-colors"
-                title="English version"
+                title="Version française"
               >
-                EN
+                FR
               </Link>
               <Link
-                to="/tarifs"
+                to="/en/prices"
                 className="ml-2 bg-ocean-600 hover:bg-ocean-700 text-white font-semibold py-2.5 px-6 rounded-full transition-all shadow-lg hover:shadow-xl"
               >
-                Réserver
+                Book Now
               </Link>
             </div>
 
@@ -102,18 +102,18 @@ export default function Layout({ children }: LayoutProps) {
                 </Link>
               ))}
               <Link
-                to="/en"
+                to="/"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block px-4 py-3 text-gray-500"
               >
-                🇬🇧 English
+                🇫🇷 Français
               </Link>
               <Link
-                to="/tarifs"
+                to="/en/prices"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block w-full text-center bg-ocean-600 text-white font-semibold py-3 px-6 rounded-lg mt-4"
               >
-                Réserver maintenant
+                Book Now
               </Link>
             </div>
           </div>
@@ -131,16 +131,16 @@ export default function Layout({ children }: LayoutProps) {
         <div className="bg-gradient-to-r from-ocean-700 to-ocean-800 py-12">
           <div className="max-w-4xl mx-auto text-center px-4">
             <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
-              Prêt à vivre une expérience inoubliable ?
+              Ready for an Unforgettable Experience?
             </h3>
             <p className="text-ocean-100 mb-6">
-              Rejoignez-nous pour une dégustation les pieds dans l'eau
+              Join us for a tasting with your feet in the water
             </p>
             <Link
-              to="/tarifs"
+              to="/en/prices"
               className="inline-flex bg-white text-ocean-800 font-semibold py-3 px-8 rounded-full hover:bg-ocean-50 transition-all shadow-lg"
             >
-              Voir les disponibilités
+              View Availability
             </Link>
           </div>
         </div>
@@ -150,14 +150,14 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid md:grid-cols-4 gap-12">
             {/* Brand */}
             <div className="md:col-span-2">
-              <img src="/images/logo.jpg" alt="Les Secrets de la Marée - Expérience ostréicole Bretagne" className="h-24 w-auto mb-4 rounded-lg" />
+              <img src="/images/logo.jpg" alt="Les Secrets de la Marée - Brittany Oyster Experience" className="h-24 w-auto mb-4 rounded-lg" />
               <p className="text-white/70 leading-relaxed mb-6 max-w-md">
-                Une expérience huîtrière authentique au cœur du Golfe du Morbihan.
-                Dégustez des huîtres fraîches et du champagne les pieds dans l'eau,
-                guidés par un ostréiculteur passionné.
+                An authentic oyster experience in the heart of the Gulf of Morbihan, Brittany.
+                Taste fresh oysters and champagne with your feet in the water,
+                guided by a passionate oyster farmer.
               </p>
               <div className="flex gap-4">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                <a href="https://www.instagram.com/les_secrets_de_la_maree/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                   <span className="text-lg">📷</span>
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -186,7 +186,7 @@ export default function Layout({ children }: LayoutProps) {
               <ul className="space-y-3 text-white/70">
                 <li className="flex items-center gap-2">
                   <span>📍</span>
-                  <span>Golfe du Morbihan, Bretagne</span>
+                  <span>Gulf of Morbihan, Brittany, France</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span>📧</span>
@@ -197,16 +197,16 @@ export default function Layout({ children }: LayoutProps) {
                 <li className="flex items-center gap-2">
                   <span>📱</span>
                   <a href="tel:+33651302497" className="hover:text-white transition-colors">
-                    06 51 30 24 97
+                    +33 6 51 30 24 97
                   </a>
                 </li>
               </ul>
               <div className="mt-6">
                 <Link
-                  to="https://maree.secretsmaree.com"
+                  to="/"
                   className="text-ocean-300 hover:text-ocean-200 transition-colors text-sm"
                 >
-                  🌊 Consulter les horaires des marées →
+                  🇫🇷 Version française →
                 </Link>
               </div>
             </div>
@@ -215,14 +215,14 @@ export default function Layout({ children }: LayoutProps) {
           {/* Bottom Bar */}
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/50 text-sm">
-              © {new Date().getFullYear()} Les Secrets de la Marée - Tous droits réservés
+              © {new Date().getFullYear()} Les Secrets de la Marée - All rights reserved
             </p>
             <div className="flex gap-6 text-white/50 text-sm">
-              <Link to="/mentions-legales" className="hover:text-white transition-colors">
-                Mentions légales
+              <Link to="/en/legal" className="hover:text-white transition-colors">
+                Legal Notice
               </Link>
-              <Link to="/politique-confidentialite" className="hover:text-white transition-colors">
-                Confidentialité
+              <Link to="/en/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
               </Link>
             </div>
           </div>
