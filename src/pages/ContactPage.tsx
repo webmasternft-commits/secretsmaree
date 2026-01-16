@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { submitForm } from '../services/formService';
 
 const CheckIcon = () => (
   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -17,12 +18,27 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setSubmitted(true);
+    setError('');
+
+    const result = await submitForm({
+      type: 'contact',
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      date: new Date().toISOString()
+    });
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      setError(result.message);
+    }
     setIsSubmitting(false);
   };
 
@@ -200,6 +216,12 @@ export default function ContactPage() {
                         . *
                       </label>
                     </div>
+
+                    {error && (
+                      <div className="bg-red-50 text-red-700 p-4 rounded-lg text-sm">
+                        {error}
+                      </div>
+                    )}
 
                     <button
                       type="submit"

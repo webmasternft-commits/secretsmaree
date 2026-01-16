@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { submitForm } from '../services/formService';
 
 const CheckIcon = () => (
   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -14,16 +15,34 @@ export default function TarifsPage() {
     phone: '',
     date: '',
     guests: '2',
-    message: ''
+    message: '',
+    rgpdConsent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setSubmitted(true);
+    setError('');
+
+    const result = await submitForm({
+      type: 'reservation',
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      date: formData.date,
+      guests: formData.guests,
+      message: formData.message,
+      submittedAt: new Date().toISOString()
+    });
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      setError(result.message);
+    }
     setIsSubmitting(false);
   };
 
@@ -329,6 +348,30 @@ export default function TarifsPage() {
                       placeholder="Allergies, demandes spéciales, occasion particulière..."
                     />
                   </div>
+
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="rgpdConsentReservation"
+                      required
+                      checked={formData.rgpdConsent}
+                      onChange={(e) => setFormData({...formData, rgpdConsent: e.target.checked})}
+                      className="mt-1 w-4 h-4 text-ocean-600 border-gray-300 rounded focus:ring-ocean-500"
+                    />
+                    <label htmlFor="rgpdConsentReservation" className="text-sm text-gray-600">
+                      J'accepte que mes données soient traitées conformément à la{' '}
+                      <Link to="/politique-confidentialite" className="text-ocean-600 hover:underline" target="_blank">
+                        politique de confidentialité
+                      </Link>
+                      . *
+                    </label>
+                  </div>
+
+                  {error && (
+                    <div className="bg-red-50 text-red-700 p-4 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
 
                   <button
                     type="submit"
