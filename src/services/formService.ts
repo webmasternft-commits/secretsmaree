@@ -25,7 +25,7 @@ export type FormData = ContactFormData | ReservationFormData;
 
 export async function submitForm(data: FormData): Promise<{ success: boolean; message: string }> {
   try {
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
+    await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: {
